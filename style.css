@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./assets/bg-desktop2.jpg);
+  background-repeat: no-repeat;
+  height: auto;
+  width: auto;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+#container {
+  width: 360px;
+  height: 712px;
+  margin: auto;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 160px;
+}
+
+#profile p {
+  font-family: "Shrikhand", cursive;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 2px;
+}
+
+#sobre p {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  text-align: justify;
+}
+
+#fixa {
+  position: fixed;
+  bottom: 50px;
+  left: 10px;
+  margin: 0 20px;
+  background: rgb(89, 245, 122);
+  width: 230px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+#fixa.shrink {
+  width: 50px;
+  transition: 0.5s all;
+  overflow: hidden;
+}
+
+#fixa img {
+  width: 50px;
+  height: 50px;
+}
+
+#fixa a .flex-itens {
+  display: flex;
+  align-items: center;
+}
+
+#fixa a .flex-itens span {
+  display: block;
+  font-weight: bold;
+  font-size: 19px;
+  text-align: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: #040305;
+  min-width: 170px;
+  opacity: 0;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+#sobre h3 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  align-items: center;
+  text-align: center;
+  font-size: 22px;
+}
+
+#icones {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  font-size: 30px;
+  justify-content: center;
+}
+
+#icones a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#icones a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 16px;
+}
+
+#fixa a .flex-itens span.aparecer {
+  transition: 2s all;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.flutuar {
+  animation-name: flutuar;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes flutuar {
+  from {
+    transform: translate3d(0, 0, 0);
+    filter: brightness(100%);
+  }
+  to {
+    transform: translate3d(0, -15px, 0);
+    filter: brightness(108%);
+  }
+}
