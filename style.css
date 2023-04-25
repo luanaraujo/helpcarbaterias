@@ -5,10 +5,7 @@
 }
 
 body {
-  background-image: url(./assets/bg-desktop2.jpg);
-  background-repeat: no-repeat;
-  height: auto;
-  width: auto;
+  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
 }
 
 body * {
@@ -17,9 +14,12 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
   height: 712px;
   margin: auto;
+  padding: 20px;
+  max-width: 588px;
+  text-align: justify;
 }
 
 #profile {
@@ -141,5 +141,12 @@ body * {
   to {
     transform: translate3d(0, -15px, 0);
     filter: brightness(108%);
+  }
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+  body {
+    background: url(./assets/bg-desktop.jpg);
   }
 }
